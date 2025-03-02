@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google Sign-In</title>
+  </head>
+  <body>
+    <h2>Google Sign-In</h2>
+    <button id="signInButton">Sign In with Google</button>
+
+    <script>
+      // Your OAuth 2.0 credentials
+      const CLIENT_ID =
+        "973174257417-3hhdn9nfu06gg0qjm7c21aj6t7osn9vp.apps.googleusercontent.com"; // Replace with your actual Client ID
+      const REDIRECT_URI = "http://127.0.0.1:5500/calender-2.html"; // Replace with your actual redirect URI
+      const SCOPE = "https://www.googleapis.com/auth/calendar"; // Requested scope
+      const STATE = "random_state_string"; // Optional but recommended for security
+
+      // Function to construct the Google OAuth authorization URL
+      function getAuthorizationUrl() {
+        return `https://accounts.google.com/o/oauth2/v2/auth?
+        client_id=${encodeURIComponent(CLIENT_ID)}&
+        redirect_uri=${encodeURIComponent(REDIRECT_URI)}&
+        response_type=code&
+        scope=${encodeURIComponent(SCOPE)}&
+        state=${encodeURIComponent(STATE)}`;
+      }
+
+      // Function to handle the sign-in button click
+      function handleSignInClick() {
+        const authUrl = getAuthorizationUrl();
+        console.log("Redirecting to:", authUrl); // Debugging
+        window.location.href = authUrl;
+      }
+
+      // Attach the sign-in button click handler
+      document
+        .getElementById("signInButton")
+        .addEventListener("click", handleSignInClick);
+    </script>
+  </body>
+</html>

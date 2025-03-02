@@ -1,0 +1,108 @@
+body {
+  height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    #6a0dad 10%,
+    /* Deep Purple */ #8134af 25%,
+    /* Medium Purple */ #a04cc2 40%,
+    /* Lighter Purple */ #c96ed6 55%,
+    /* Soft Lavender */ #e8a2c2 70%,
+    /* Muted Pink */ #f7c7a3 85%,
+    /* Light Peach */ #ffdab9 100% /* Soft Peach */
+  );
+  background-attachment: fixed;
+  margin: 0;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: large;
+  padding: 30px 30px 30px 30px;
+}
+
+#mybucket {
+  margin: 15px;
+  font-size: 20px;
+}
+#journal {
+  margin: 15px;
+  font-size: 20px;
+}
+#map {
+  margin: 15px;
+  font-size: 20px;
+}
+#calender {
+  margin: 15px;
+  font-size: 20px;
+}
+#achiv {
+  margin: 15px;
+  font-size: 20px;
+}
+
+.nav-link:hover {
+  color: #c96ed6;
+}
+
+.btn:hover {
+  color: #6a0dad;
+  background-color: white;
+}
+
+.btn {
+  background-color: #efb873;
+  color: white;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin: 0px 20px 0px 20px;
+  font-size: large;
+}
+
+.navbar-brand img {
+  width: 200px; /* Set desired width */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Prevent stretching */
+}
+
+.h1 {
+  font-size: 4.5em; /* Increase font size */
+  color: white; /* Set desired color */
+}
+
+.lead {
+  font-size: 1.5em; /* Increase font size */
+  color: white; /* Set desired color */
+}
+
+#features h2 {
+  color: white;
+  padding: 20px;
+  font-size: 3.5em;
+}
+
+.col-md-4 h4 {
+  font-size: 2em;
+}
+
+.col-md-4 p {
+  font-size: 1.5em;
+}
+
+.gallery {
+  height: 300px;
+  font-size: small;
+}
+
+#gallery-title {
+  font-size: 4em;
+  text-align: center;
+  padding: 30px;
+}
